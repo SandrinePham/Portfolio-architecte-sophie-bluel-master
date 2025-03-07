@@ -1,0 +1,447 @@
+/* Reset CSS - http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #FFFEF8;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global Styles */
+
+body {
+	max-width: 1140px;
+	margin: auto;
+	font-family: 'Work Sans';
+	font-size: 14px;
+}
+a, a:visited {
+	text-decoration: none;
+	color: black;
+}
+/* Typographie */
+
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C;
+}
+h1 > span {
+	font-family: 'Work Sans';
+	font-size: 10px;
+	letter-spacing: 0.1em;
+}
+h2 {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154;
+	display: flex;
+	justify-content: center;
+}
+
+/* Header & Navigation */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+li:hover {
+	color: #B1663C;
+}
+
+/* Sections & Layout */
+
+section {
+	margin: 50px 0;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1;
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+#introduction article {
+	flex: 1;
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+/* Portfolio & Galerie */
+
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+.gallery img {
+	width: 100%;
+}
+
+/* Formulaires (Contact & Login) */
+
+#contact, #login {
+	width: 50%;
+	margin: auto;
+}
+#contact > *, #login > * {
+	text-align: center;
+}
+#contact h2, #login h2 {
+	margin-bottom: 20px;
+}
+#contact form, #login form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+#contact input, #login input, .open-add-view ,#addProjectForm input , #addProjectForm select {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label, #login label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea, #login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+input[type="submit"] {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+/* Filtres & Boutons */
+
+#categoriesFilter {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px;
+}
+.filter {
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #1D6154;
+	border-radius: 50px;
+	color: #1D6154;
+	margin-bottom: 45px;
+}
+.filter:hover, .selected {
+	background-color: #1D6154;
+	color: white;
+}
+.open-add-view {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	text-align: center;
+	border-radius: 60px;
+	margin: 0 auto; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	font-size: 14px;
+  }
+
+/* Modal & Bannière */
+#banner {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+}
+.hidden {
+	display: none !important;
+}
+.modifier-text {
+	background-color: #FFFEF8;
+	color: black;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.modal {
+	width: 630px;
+	height: 670px;
+	min-height: 400px;
+	max-height: 430px;
+	margin: 0 auto;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border-radius: 10px;
+	padding: 40px;
+}
+
+
+.close{
+	display: flex;
+	justify-content: flex-end;
+	font-size: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.view{
+	display: flex;
+	justify-content: center;
+}
+
+  
+.modal-title{
+	font-family: Work Sans;
+font-weight: 400;
+font-size: 26px;
+line-height: 30.5px;
+text-align: center;
+color: black;
+
+}
+ 
+  
+  .gallery-modal {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr); /* 5 images par ligne */
+	gap: 10px;
+	margin: 30px 0px 30px 0px;
+  }
+  
+  
+
+  .view-gallery {
+	display: none; /* Par défaut, cachée */
+  }
+  
+  .view-gallery.active {
+	display: block; /* Affichée lorsque 'active' est ajoutée */
+  }
+  
+  .view-add {
+	display: none; /* Par défaut, cachée */
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  top: 0;
+  background-color: white; /* Fond blanc pour masquer ce qu'il y a derrière */
+  }
+  
+  .view-add.active {
+	display: flex; /* Affichée lorsque 'active' est ajoutée */
+  }
+
+
+  .gallery-modal img {
+	width: 76px;
+	height: 102px;
+	display: block;
+  }
+
+  .gallery-modal figure {
+	margin: 0;
+	text-align: center;
+	position: relative;
+  }
+
+
+  .delete-btn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: black;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 10px;
+}
+
+.delete-btn i {
+	font-size: 10px;
+	color: white;
+}  
+
+#addProjectForm {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-top: 20px;
+	width: 420px;
+}
+
+/* Conteneur du bouton retour */
+.modal .back-btn {
+	position: absolute;
+	top: 20px; /* Distance depuis le haut */
+	left: 20px; /* Distance depuis la gauche */
+	font-size: 20px; /* Taille de l'icône */
+	cursor: pointer;
+	background: none;
+	border: none;
+	color: black; /* Couleur de l'icône */
+  }
+
+.back-to-gallery{
+	position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+
+.imageUpload{
+	background-color:#E8F1F6 ;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+}
+
+.fa-image{
+	font-size: 50px;
+	color: #B9C5CC;
+}
+
+.addPhoto{
+	background-color: #B9C5CC;
+	color: #306685;
+	padding: 10px;
+	border-radius: 50px;
+	cursor: pointer;
+	margin: 0px 20px 0px 20px;
+}
+
+.descriptionPhoto{
+	font-size: 10px;
+}
+#projectImage {
+	display: none;
+}
+
+.submitFormulaire{
+	background-color: #A7A7A7;
+	color: white;
+	padding: 10px;
+	border-radius: 50px;
+	cursor: pointer;
+	border: none;
+	width: 40%;
+	margin: auto;
+}
+
+.modal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #B3B3B3; /* Couleur du trait */
+    margin-top: 20px; /* Espacement au-dessus et en dessous */
+    border: none;
+}
+
+.projetEdit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
